@@ -1,0 +1,11 @@
+HTTPS_PROXY=http://127.0.0.1:8118 forge create src/ExampleContract.sol:ExampleContract --constructor-args 0x6EDCE65403992e310A62460808c4b910D972f10f --rpc-url <sepolia_rpc>  --private-key $(cat ../test.pk )
+HTTPS_PROXY=http://127.0.0.1:8118 forge create src/ExampleContract.sol:ExampleContract --constructor-args 0x6EDCE65403992e310A62460808c4b910D972f10f --rpc-url https://sepolia.optimism.io  --private-key $(cat ../test.pk )
+
+
+HTTPS_PROXY=http://127.0.0.1:8118 cast send 0x1D6b59e2614eC4E30A6db90b0027e878529a12F4 "setPeer(uint32,bytes32)" 40232 0000000000000000000000001A70A02C597A88d7862869cC5aE5ec6446E7867d   --rpc-url <sepolia_rpc>  --private-key $(cat ../test.pk )
+
+HTTPS_PROXY=http://127.0.0.1:8118 cast send 0x1A70A02C597A88d7862869cC5aE5ec6446E7867d "setPeer(uint32,bytes32)" 40161 0000000000000000000000001D6b59e2614eC4E30A6db90b0027e878529a12F4   --rpc-url https://sepolia.optimism.io  --private-key $(cat ../test.pk )
+
+HTTPS_PROXY=http://127.0.0.1:8118 cast send 0x1D6b59e2614eC4E30A6db90b0027e878529a12F4 --value 0.0001ether "sendMessage(uint32, string, bytes)" 40232 "Hello World" 0x00030100110100000000000000000000000000030d40 --rpc-url <sepolia_rpc>  --private-key $(cat ../test.pk )
+
+HTTPS_PROXY=http://127.0.0.1:8118 cast call 0x1A70A02C597A88d7862869cC5aE5ec6446E7867d "data()(string)"  --rpc-url https://sepolia.optimism.io
