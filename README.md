@@ -1,5 +1,5 @@
 ## demo
-from [base docs](https://docs.base.org/tutorials/cross-chain-with-layerzero/)
+from [base docs](https://docs.base.org/cookbook/cross-chain/bridge-tokens-with-layerzero)
 ## Foundry
 
 **Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
